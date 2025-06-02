@@ -3,6 +3,13 @@ public class BankAccount {
     private int accountNumber;
     private float interestRate;
 
+    public BankAccount(double initialBalance, float introInterestRate){
+        balance = initialBalance;
+        interestRate = introInterestRate;
+    }
+
+
+
     public double checkBalance(){
         return balance;
     }
