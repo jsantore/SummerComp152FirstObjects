@@ -9,8 +9,10 @@ void main(){
     profsAccount.deposit(1000);
     profsAccount.addInterest();
     yourAccount.addInterest();
-    System.out.println("Profs account balance: " + profsAccount.checkBalance());
-    System.out.println("Your account balance: " + yourAccount.checkBalance());
+    System.out.println("Profs account balance: " + profsAccount.checkBalance()+
+            " Prof's account number "+ profsAccount.getAccountNumber());
+    System.out.println("Your account balance: " + yourAccount.checkBalance()+
+            " Your account number "+ yourAccount.getAccountNumber());
     profsAccount.withdraw(100);
     System.out.println("Profs account balance: " + profsAccount.checkBalance());
     System.out.println("Your account balance: " + yourAccount.checkBalance());

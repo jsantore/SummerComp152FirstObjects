@@ -2,13 +2,18 @@ public class BankAccount {
     private double balance;
     private int accountNumber;
     private float interestRate;
+    private static int nextAccountNumber = 2000;
 
     public BankAccount(double initialBalance, float introInterestRate){
         balance = initialBalance;
         interestRate = introInterestRate;
+        accountNumber = nextAccountNumber;
+        nextAccountNumber += 1;
     }
 
-
+    public int getAccountNumber(){
+        return accountNumber;
+    }
 
     public double checkBalance(){
         return balance;
