@@ -24,4 +24,8 @@ public class BankAccount {
         return false;
     }
 
+    public void printAccountNumber(){
+        System.out.println("Account number: " + accountNumber);
+    }
+
 }
