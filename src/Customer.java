@@ -13,12 +13,30 @@ public class Customer {
         return customerId;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public boolean openAccount(double initialDeposit){
         var newCustomerAccount = new BankAccount(initialDeposit, 0.03f);
         var didItWork = accounts.add(newCustomerAccount);
         return didItWork;
     }
 
+    public BankAccount closeAccount(int BankAccountId){
+        BankAccount closedAccount = null;
+        for(var account : accounts){
+            if (account.getAccountNumber() == BankAccountId){
+                closedAccount = account;
+                break;
+            }
+        }
+        if(closedAccount==null){
+            return null;
+        }
+        accounts.remove(closedAccount);
+        return closedAccount;
+    }
 
 
 
