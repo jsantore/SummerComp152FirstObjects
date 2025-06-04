@@ -5,8 +5,10 @@ public class Customer {
     private ArrayList<BankAccount> accounts;
     private int customerId;
 
-    public Customer(){
+    public Customer(String CustomerName, int taxId) {
         accounts = new ArrayList<BankAccount>();
+        name = CustomerName;
+        customerId = taxId;
     }
 
     public int getCustomerId(){
