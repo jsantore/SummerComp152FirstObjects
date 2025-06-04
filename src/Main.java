@@ -5,9 +5,8 @@
 void main(){
 
     var customer = new Customer();
-    customer.setName("Prof", null, "Santore");
     customer.openAccount(1000);
-//    var profsAccount = new BankAccount(1000, 0.05f);
+    var profsAccount = new BankAccount(1000, 0.05f);
 //    var yourAccount = new BankAccount(500, 0.02f);
 //    yourAccount.deposit(500);
 //    profsAccount.deposit(1000);

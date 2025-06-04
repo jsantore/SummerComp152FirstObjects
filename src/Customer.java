@@ -1,32 +1,25 @@
 import java.util.ArrayList;
 
 public class Customer {
-    private String firstName;
-    private String lastName;
-    private String middleName;
+    private String name;
     private ArrayList<BankAccount> accounts;
+    private int customerId;
 
     public Customer(){
-        accounts = new ArrayList<>();
+        accounts = new ArrayList<BankAccount>();
     }
 
-    public void setName(String fName,
-                        String lName, String mName){
-        firstName = fName;
-        lastName = lName;
-        middleName = mName;
+    public int getCustomerId(){
+        return customerId;
+    }
+
+    public boolean openAccount(double initialDeposit){
+        var newCustomerAccount = new BankAccount(initialDeposit, 0.03f);
+        var didItWork = accounts.add(newCustomerAccount);
+        return didItWork;
     }
 
 
-    public void openAccount(double initialBalance){
-        var newAccount = new BankAccount(initialBalance, 0.01f);
-        accounts.add(newAccount);
-    }
 
-    public String getName(){
-        if (middleName == null) {
-            return firstName + " " + lastName;
-        }
-        return firstName + " " + middleName + " " + lastName;
-    }
+
 }
