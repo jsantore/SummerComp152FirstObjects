@@ -25,6 +25,11 @@ public class Customer {
         return didItWork;
     }
 
+    public boolean openAccount(BankAccount account){
+        var didItWork = accounts.add(account);
+        return didItWork;
+    }
+
     public BankAccount closeAccount(int BankAccountId){
         BankAccount closedAccount = null;
         for(var account : accounts){
